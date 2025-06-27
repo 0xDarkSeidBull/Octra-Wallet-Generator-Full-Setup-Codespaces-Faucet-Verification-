@@ -1,7 +1,9 @@
-### 🚀 Octra Wallet Generator – Codespaces Full Guide
+###  Octra Wallet Generator – Codespaces Full Guide
 
 
-  ✅ Requirements:
+  Requirements:
+
+  
   GitHub account
 
   Codespaces access
@@ -17,7 +19,7 @@ Go to https://github.com/octra-labs/wallet-gen
 
 Click <> Code > Create codespace on main
 
-### 2. 📥 Install Bun
+### 2.  Install Bun
 
 ```bash
 curl -fsSL https://bun.sh/install | bash
@@ -37,7 +39,7 @@ bun --version
 
 ---
 
-### 3. 🔓 Open Port 8888 (optional if testing locally)
+### 3.  Open Port 8888 (optional if testing locally)
 
 ```bash
 sudo apt update && sudo apt install ufw -y
@@ -46,7 +48,7 @@ sudo ufw allow 8888
 
 ---
 
-### 4. 🧠 Clone the Wallet Generator
+### 4.  Clone the Wallet Generator
 
 ```bash
 git clone https://github.com/octra-labs/wallet-gen
@@ -55,7 +57,7 @@ cd wallet-gen
 
 ---
 
-### 5. 📦 Install Dependencies
+### 5.  Install Dependencies
 
 ```bash
 bun install
@@ -73,7 +75,7 @@ This creates a `wallet-generator` binary.
 
 ---
 
-### 7. 🚀 Start the Wallet Generator
+### 7.  Start the Wallet Generator
 
 ```bash
 bun start
@@ -84,7 +86,7 @@ bun start
 
 ---
 
-## 💸 Claim Faucet Tokens
+## Claim Faucet Tokens
 
 Once a wallet is generated, copy your **Octra address** and visit:
 
@@ -94,19 +96,19 @@ Paste the address to claim test tokens.
 
 ---
 
-## 🧾 Verify on the Octra Explorer
+## Verify on the Octra Explorer
 
 Use your transaction hash to view and verify on:
 
 🔍 [https://explorer.octra.network](https://explorer.octra.network)
 
 ---
-## . 💬 Join the Community
+## Join the Community
 Have questions or want to participate?
 
 🔗 Join the Octra Discord: https://discord.gg/octra
 Get support, share feedback, and connect with the community!
-## 📌 Tips
+##  Tips
 
 * Always keep your mnemonic/private key secure.
 * If you want to run the UI publicly, launch the server on `0.0.0.0` instead of `localhost`:
@@ -117,7 +119,7 @@ bun start --host 0.0.0.0
 
 ---
 
-## 🔐 Security Warning
+##  Security Warning
 
 ⚠️ This tool generates **real cryptographic wallets**. Do **NOT** use it on shared or insecure environments for mainnet/private keys.
 
