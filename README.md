@@ -101,7 +101,11 @@ Use your transaction hash to view and verify on:
 🔍 [https://explorer.octra.network](https://explorer.octra.network)
 
 ---
+## . 💬 Join the Community
+Have questions or want to participate?
 
+🔗 Join the Octra Discord: https://discord.gg/octra
+Get support, share feedback, and connect with the community!
 ## 📌 Tips
 
 * Always keep your mnemonic/private key secure.
