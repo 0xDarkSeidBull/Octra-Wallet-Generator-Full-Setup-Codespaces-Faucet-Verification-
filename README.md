@@ -1,4 +1,4 @@
-## 📝 Here is your complete `README.md` content:
+
 
 ````markdown
 # 🦾 Octra Wallet Generator – Full Setup Guide (Codespaces + Faucet + Verification)
