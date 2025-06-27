@@ -1,49 +1,52 @@
+### 🚀 Octra Wallet Generator – Codespaces Full Guide
 
 
-````markdown
-# 🦾 Octra Wallet Generator – Full Setup Guide (Codespaces + Faucet + Verification)
+  ✅ Requirements:
+  GitHub account
 
-This guide walks you through running the [Octra Wallet Generator](https://github.com/octra-labs/wallet-gen) using GitHub Codespaces. It includes generating wallets, claiming faucet tokens, and verifying transactions on the Octra blockchain.
+  Codespaces access
 
----
+  Octra Wallet Generator GitHub
 
-## 🚀 What You'll Do
 
-✅ Generate secure Octra wallets  
-✅ Use faucet to get test tokens  
-✅ Run everything inside GitHub Codespaces  
-✅ Verify your transaction on the Octra explorer
 
----
 
-## 🧱 Prerequisites
+### 1: Create Codespace
 
-- ✅ GitHub account
-- ✅ Codespaces access (comes with GitHub free or pro)
-- ✅ Basic terminal knowledge (copy-paste works!)
+Go to https://github.com/octra-labs/wallet-gen
 
----
+Click <> Code > Create codespace on main
 
-## ⚙️ Step 1: Open Codespace
-
-1. Visit: [https://github.com/octra-labs/wallet-gen](https://github.com/octra-labs/wallet-gen)
-2. Click the green `Code` button → **"Create codespace on main"**
-
----
-
-## 💻 Step 2: Install Bun
-
-Inside the Codespaces terminal:
+### 2. 📥 Install Bun
 
 ```bash
 curl -fsSL https://bun.sh/install | bash
-exec $SHELL
-bun --version
 ````
+
+Restart the shell:
+
+```bash
+exec $SHELL
+```
+
+Check version:
+
+```bash
+bun --version
+```
 
 ---
 
-## 📥 Step 3: Clone Wallet Generator (if not already)
+### 3. 🔓 Open Port 8888 (optional if testing locally)
+
+```bash
+sudo apt update && sudo apt install ufw -y
+sudo ufw allow 8888
+```
+
+---
+
+### 4. 🧠 Clone the Wallet Generator
 
 ```bash
 git clone https://github.com/octra-labs/wallet-gen
@@ -52,100 +55,67 @@ cd wallet-gen
 
 ---
 
-## 📦 Step 4: Install & Build
+### 5. 📦 Install Dependencies
 
 ```bash
 bun install
-bun run build
 ```
 
 ---
 
-## 🟢 Step 5: Run Wallet Generator
+### 6. 🔧 Build the Executable (Optional)
+
+```bash
+bun run build
+```
+
+This creates a `wallet-generator` binary.
+
+---
+
+### 7. 🚀 Start the Wallet Generator
 
 ```bash
 bun start
 ```
 
-> You’ll see:
-> `Starting server on http://localhost:8888`
-
-In Codespaces UI → Click `PORTS` tab → Open port `8888`
+> Access the UI at:
+> 🔗 **[http://localhost:8888](http://localhost:8888)** (Codespace browser will expose this link)
 
 ---
 
-## 🪪 Step 6: Generate a Wallet
+## 💸 Claim Faucet Tokens
 
-1. Click **"Generate New Wallet"**
-2. Copy your `oct...` wallet address
-3. Save your **mnemonic & private key** securely
+Once a wallet is generated, copy your **Octra address** and visit:
 
----
+🔗 [https://faucet.octra.network](https://faucet.octra.network)
 
-## 💧 Step 7: Claim Test Tokens
-
-Visit [https://faucet.octra.network/](https://faucet.octra.network/)
-Paste your **wallet address** and click `Claim`
-
-> ✅ Example message:
-> `666 oct sent.`
-> `tx: 13464df3a351e9f6...`
+Paste the address to claim test tokens.
 
 ---
 
-## 🔍 Step 8: Verify Transaction
+## 🧾 Verify on the Octra Explorer
 
-1. Copy your TX hash from the success message
-2. Visit the [Octra Explorer](https://explorer.octra.network/)
-3. Paste TX hash and check transaction status
+Use your transaction hash to view and verify on:
+
+🔍 [https://explorer.octra.network](https://explorer.octra.network)
 
 ---
 
-## 📌 Optional: Save Multiple Wallets
+## 📌 Tips
 
-Edit `wallet_generator.ts` to generate 100+ wallets programmatically:
+* Always keep your mnemonic/private key secure.
+* If you want to run the UI publicly, launch the server on `0.0.0.0` instead of `localhost`:
 
-```ts
-for (let i = 0; i < 100; i++) {
-  const wallet = generateWallet();
-  saveWalletToFile(wallet); // You can write to .json or .csv
-}
+```bash
+bun start --host 0.0.0.0
 ```
 
 ---
 
-## 🔐 Security Reminder
+## 🔐 Security Warning
 
-* Always save your mnemonic phrases
-* Never share private keys
-* Only use faucet funds on testnets
+⚠️ This tool generates **real cryptographic wallets**. Do **NOT** use it on shared or insecure environments for mainnet/private keys.
 
 ---
 
-## 🙌 Credits
-
-* Built with ❤️ by [Octra Labs](https://github.com/octra-labs)
-* Guide maintained by [@YourGitHubUsername](https://github.com/0xDarkSeidBull)
-
----
-
-## 📎 Useful Links
-
-* 🧠 [Octra Wallet Generator](https://github.com/octra-labs/wallet-gen)
-* 💧 [Octra Faucet](https://faucet.octra.network/)
-* 🔍 [Octra Explorer](https://explorer.octra.network/)
-* 🚀 [Bun Installer](https://bun.sh/)
-
----
-
-```
-
----
-
-
-
-Let me know if you want:
-- a demo badge (e.g., GIF preview of UI)
-- to turn this into a blog post
-- a bash script to automate it all
-```
