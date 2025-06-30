@@ -15,11 +15,6 @@ Linux/Ubuntu OS
 
 ---
 
-Let me know if you want this styled with icons (🖥️, 🌐, etc.) or turned into a collapsible section for GitHub!
-
-
-
-
 ### 1: Create Codespace
 
 Go to https://github.com/octra-labs/wallet-gen
