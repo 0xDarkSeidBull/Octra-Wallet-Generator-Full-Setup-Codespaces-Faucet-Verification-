@@ -134,6 +134,7 @@ nano wallet.json
 "priv": Paste your private key in Base64 format (not raw hex)
 
 "addr": Paste your Octra wallet address, which starts with oct...
+
 Press Ctrl + X, then Y, then Enter to save and exit the file.
 
 ## 5. Start the Octra CLI
